@@ -68,7 +68,7 @@ if (isset($_GET['delete'])) {
                             <td><?php echo htmlspecialchars($product['manufactured_machine']); ?></td>
                             <td><?php echo htmlspecialchars($product['manufactured_date']); ?></td>
                             <td><?php echo htmlspecialchars($product['product_quality']); ?></td>
-                            <td><a href="view_products.php?delete=<?php echo $product['product_id']; ?>">Delete</a></td>
+                            <td><a class="delet-btn"   href="view_products.php?delete=<?php echo $product['product_id']; ?>">Delete</a></td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

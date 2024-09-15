@@ -121,8 +121,8 @@ nav a:hover {
   transition: 0.3s;
 }
 
-nav .icon{
-  background:var(--green);
+nav .icon {
+  background: var(--green);
 }
 .container {
   max-width: 1200px;
@@ -213,7 +213,8 @@ table tbody tr:nth-child(even) {
 }
 
 table a {
-  color: var(--green);
+  color: var(--white);
+  background: var(--green);
 }
 
 table a:hover {

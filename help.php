@@ -80,7 +80,7 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
             <p>After adding products, you can view all your products in the product table on your dashboard. To delete a product, locate it in the product table and click on the "Delete" button under the "Action" column in the corresponding product row. You can also edit product details by clicking the "Edit" button next to each product.</p>
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="product-table.jpg" alt="Product Table">
+                    <img src="view_product.jpeg" alt="Product Table">
                 </div>
             </div>
         </section>
