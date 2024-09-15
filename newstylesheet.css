@@ -1,0 +1,174 @@
+:root {
+  --green: #27ae60;
+  --black: #333;
+  --white: #fff;
+  --bg-color: #eee;
+  --dark-green: #2c6e61;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --border: 1rem solid var(--black);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  background-image: url("PicNew4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  display: flex; /* Center content vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main container styles */
+.container {
+  max-width: 500px; /* Limit the width of forms for a more modern look */
+  padding: 2rem;
+  margin: 2rem auto; /* Center the container */
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.container main p {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 10px;
+}
+.container main p a {
+  margin-top: 10px;
+  font-weight: bold;
+  color: var(--green);
+  margin-left: 5px;
+}
+
+/* Logo Styles */
+.logo {
+  text-align: center;
+  margin-bottom: 1.5rem; /* Space below the logo */
+}
+
+.logo img {
+  width: 100%; /* Responsive logo size */
+  max-width: 150px; /* Max width for logo */
+}
+
+/* Header styles */
+header {
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 1rem; /* Reduce padding for a modern look */
+  text-align: center;
+  border-radius: 1rem 1rem 0 0; /* Rounded top corners */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem; /* Adjusted font size */
+  font-weight: bold;
+}
+
+.logo {
+  text-align: center; /* Center the logo */
+  margin-bottom: 1.5rem; /* Space below the logo */
+}
+
+.logo img {
+  width: 100%; /* Make the logo responsive */
+  max-width: 150px; /* Set a max width for the logo */
+}
+/* Form styles */
+form {
+  padding: 1rem; /* Reduced padding */
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.4rem; /* Adjusted font size */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--black);
+  font-size: 1.4rem; /* Adjusted font size */
+  margin-bottom: 1rem;
+}
+
+form button {
+  background: var(--green);
+  color: var(--white);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.5rem; /* Adjusted button font size */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%; /* Full width button */
+}
+
+form button:hover {
+  background: var(--black);
+}
+
+.container form p {
+  margin-top: 20px;
+}
+
+/* Error message styling */
+.error {
+  background: var(--bg-color);
+  padding: 1rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  .container {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Adjust header font size */
+  }
+
+  form button {
+    font-size: 1.4rem; /* Adjust button font size */
+  }
+
+  form label,
+  form input {
+    font-size: 1.3rem; /* Adjust form label and input font size */
+  }
+}
+

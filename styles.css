@@ -1,0 +1,273 @@
+:root {
+  --green: #27ae60;
+  --black: #333;
+  --white: #fff;
+  --bg-color: #eee;
+  --dark-green: #2c6e61;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1);
+  --border: 1rem solid var(--black);
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  background-image: url("PicNew4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+/* New Background for the Dashboard */
+.background-section {
+  background-image: url("PicNew4.jpg"); /* Replace with actual image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-bottom: auto;
+}
+
+/* Centered welcome note */
+.welcome-header {
+  margin-bottom: 40px;
+}
+
+.welcome-header h1 {
+  font-size: 4rem;
+  color: var(--white);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+}
+
+/* Buttons stacked in the center */
+/* Button container */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Increased gap between buttons */
+}
+
+* Custom button styles */ .custom-button {
+  padding: 20px 50px; /* Adjust padding for bigger button size */
+  font-size: 2rem; /* Increase font size */
+  color: var(--white);
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border-radius: 12px; /* More rounded corners */
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 350px; /* Adjust the width of the buttons */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--box-shadow);
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background: var(--primary-color);
+  padding: 1rem;
+  width: 100%;
+}
+
+nav a {
+  color: var(--white);
+  font-size: 1.8rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+nav a:hover {
+  background: var(--green);
+  transition: 0.3s;
+}
+
+nav .icon{
+  background:var(--green);
+}
+.container {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+main {
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+form {
+  background: var(--bg-color);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.6rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--black);
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+form button {
+  background: var(--green);
+  color: var(--white);
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--black);
+}
+
+.message {
+  background: var(--bg-color);
+  padding: 1.5rem;
+  color: var(--black);
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  font-size: 1.6rem;
+  border: 1px solid var(--black);
+}
+
+table thead {
+  background: var(--bg-color);
+}
+
+table tbody {
+  background: var(--white);
+}
+
+table tbody tr:nth-child(even) {
+  background: var(--bg-color);
+}
+
+table a {
+  color: var(--green);
+}
+
+table a:hover {
+  color: var(--black);
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+
+  nav {
+    height: auto;
+    padding: 1rem;
+  }
+
+  nav ul {
+    display: block;
+    position: static;
+    width: 100%;
+    background: var(--dark-green);
+    text-align: center;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 0;
+  }
+
+  nav a {
+    display: block;
+    padding: 1rem;
+  }
+
+  .checkbtn {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    display: block;
+  }
+
+  form {
+    padding: 1rem;
+  }
+
+  table {
+    font-size: 1.4rem;
+  }
+}

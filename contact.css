@@ -1,0 +1,196 @@
+/* Contact Us Page Styles */
+
+:root {
+  --green: #27ae60;
+  --black: #333;
+  --white: #fff;
+  --bg-color: #eee;
+  --dark-green: #2c6e61;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Reset styles */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Body styles */
+body {
+  background-image: url("PicNew4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-green);
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+nav .logo img {
+  width: 100%;
+  max-width: 150px; /* Responsive logo size */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--green);
+  border-radius: 0.3rem;
+}
+
+/* Hamburger menu styles */
+.checkbtn {
+  display: none; /* Hidden by default */
+}
+
+#check {
+  display: none; /* Hidden by default */
+}
+
+/* Container styles */
+.container {
+  padding: 2rem;
+  max-width: 500px; /* Reduced from 600px or previous value */
+  margin: 0 auto; /* This centers the container horizontally */
+}
+
+/* Contact section styles */
+.contact-section {
+  background-color: var(--white);
+  padding: 1.5rem; /* Slightly reduced padding */
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+}
+
+.contact-section h1 {
+  font-size: 2rem; /* Slightly smaller heading */
+  color: var(--black);
+  margin-bottom: 1rem; /* Spacing below the main heading */
+}
+
+.contact-section p {
+  margin-bottom: 1.5rem; /* Spacing below the paragraph */
+  line-height: 1.6; /* Improve readability */
+  font-size: 1.2rem; /* Smaller text */
+}
+
+/* Form styles */
+.form-group {
+  margin-bottom: 1.5rem; /* Spacing between form groups */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem; /* Space between label and input */
+  font-weight: bold;
+  font-size: 1.2rem; /* Smaller text */
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem; /* Slightly reduced padding */
+  border-radius: 0.3rem;
+  border: 1px solid var(--black);
+  font-size: 1.1rem; /* Smaller input and button text */
+}
+
+.form-group textarea {
+  resize: none; /* Prevent resizing the textarea */
+}
+
+/* Button styles */
+.btn {
+  background: var(--green);
+  color: var(--white);
+  padding: 0.7rem; /* Slightly reduced padding */
+  border-radius: 0.5rem;
+  font-size: 1.1rem; /* Smaller input and button text */
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%; /* Full width button */
+}
+
+.btn:hover {
+  background: var(--black);
+}
+
+/* Responsive styles */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  .container {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 60%; /* Use percentage for smaller screens */
+    padding: 1rem;
+  }
+  nav ul {
+    display: none; /* Hide navigation items */
+  }
+
+  .checkbtn {
+    display: block; /* Show hamburger icon */
+    cursor: pointer;
+  }
+
+  #check:checked ~ ul {
+    display: flex; /* Show navigation items when hamburger is checked */
+    flex-direction: column; /* Stack vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dark-green);
+    width: 100%;
+    z-index: 9;
+  }
+
+  nav ul li {
+    margin: 0; /* Remove side margin when stacked */
+  }
+
+  .contact-section h1 {
+    font-size: 2rem; /* Adjust header font size for smaller screens */
+  }
+
+  .btn {
+    font-size: 1.4rem; /* Adjust button font size */
+  }
+}

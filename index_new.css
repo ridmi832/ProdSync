@@ -1,0 +1,175 @@
+/* dashboard.css */
+
+:root {
+  --green: #27ae60;
+  --black: #333;
+  --white: #fff;
+  --bg-color: #eee;
+  --dark-green: #2c6e61;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Reset styles */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+/* Body styles */
+body {
+  background-image: url("PicNew4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  background-color: var(--bg-color);
+  /*display: flex;
+  flex-direction: column;*/
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-green);
+  padding: 1rem;
+  position: relative;
+  z-index: 10;
+}
+
+nav .logo img {
+  width: 100%;
+  max-width: 150px; /* Responsive logo size */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background: var(--green);
+  border-radius: 0.3rem;
+}
+
+/* Hamburger menu styles */
+.checkbtn {
+  display: none; /* Hidden by default */
+}
+
+#check {
+  display: none; /* Hidden by default */
+}
+
+/* Main container */
+.main-container {
+  padding: 2rem;
+  flex: 1; /* Allow the main container to take up remaining space */
+}
+
+/* Welcome header styles */
+.welcome-header {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+}
+
+.welcome-header h1 {
+  font-size: 2.5rem;
+  color: var(--black);
+  text-align: center; /* Center align text */
+}
+
+/* Button container styles */
+.button.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  margin-top: 10rem;
+}
+
+/* Card styles */
+.custom-button {
+  background: var(--white);
+  color: var(--black);
+  padding: 2rem;
+  border-radius: 1rem;
+
+  font-size: 1.8rem;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-button:hover {
+  background: var(--green);
+  color: var(--white);
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none; /* Hide navigation items */
+  }
+
+  .checkbtn {
+    display: block; /* Show hamburger icon */
+    cursor: pointer;
+  }
+
+  #check:checked ~ ul {
+    display: flex; /* Show navigation items when hamburger is checked */
+    flex-direction: column; /* Stack vertically */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--dark-green);
+    width: 100%;
+    z-index: 9;
+  }
+
+  nav ul li {
+    margin: 0; /* Remove side margin when stacked */
+  }
+
+  .welcome-header h1 {
+    font-size: 2rem; /* Adjust header font size */
+  }
+
+  .custom-button {
+    font-size: 1.6rem; /* Adjust button font size */
+    width: 180px;
+    height: 130px;
+  }
+}
