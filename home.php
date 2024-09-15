@@ -1,10 +1,14 @@
 <?php
-session_start(); // Start session to manage user login
+session_start(); // This initializes the session
 
-// Check if user is logged in (optional, if needed)
-if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php'); // Redirect to login page if not logged in
-    exit();
+// Check if either user_id or admin_id is set in the session
+if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
+    // User is logged in (either as regular user or admin)
+    // The page will continue to load here
+} else {
+    // Neither user_id nor admin_id is set in the session
+    header('Location: login.php'); // Redirect to login page
+    exit(); // Stop executing the rest of the script
 }
 ?>
 

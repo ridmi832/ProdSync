@@ -26,10 +26,10 @@ if (!isset($_SESSION['admin_id'])) {
 
       </label>
       <div class="logo">
-      <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> <!-- Add your logo image here -->
+      <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> 
       </div>
       <ul>
-        <li><a class="active" href="home.php">Home</a></li>
+        <li><a  href="home.php">Home</a></li>
         <li><a href="aboutUs.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="help.php">Help</a></li>
