@@ -60,7 +60,7 @@ if(isset($_GET['delete'])){
           echo '<td>' . $row['full_name'] . '</td>';
           echo '<td>' . $row['email'] . '</td>';
           echo '<td>
-            <a href="admin_edit.php?user_id=' . $row['user_id'] . '" class="btn"><i class="fas fa-edit"></i> Edit</a>
+            <a href="admin_edit.php?user_id=' . $row['user_id'] . '" class="btn"> Edit</a>
             <a href="view_users.php?delete=' . $row['user_id'] . '" class="btn" onclick="return confirm(\'Are you sure you want to delete this user?\')">Delete</a>
           </td>';
           echo '</tr>';
