@@ -56,7 +56,7 @@ if(isset($_GET['delete'])){
         while($row = mysqli_fetch_assoc($select)){
           echo '<tr>';
           echo '<td>' . $row['user_id'] . '</td>';
-          echo '<td>' . $row['username'] . '</td>';
+          echo '<td><a href="user_products.php?user_id=' . $row['user_id'] . '">' . $row['username'] . '</a></td>';
           echo '<td>' . $row['full_name'] . '</td>';
           echo '<td>' . $row['email'] . '</td>';
           echo '<td>

@@ -29,10 +29,7 @@ if (!isset($_SESSION['admin_id'])) {
       <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> 
       </div>
       <ul>
-        <li><a  href="home.php">Home</a></li>
-        <li><a href="aboutUs.php">About</a></li>
-        <li><a href="contact.php">Contact</a></li>
-        <li><a href="help.php">Help</a></li>
+       
         <li><a href="admin.php?logout=true">Logout</a></li>
       </ul>
     </nav>
