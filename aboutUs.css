@@ -48,6 +48,7 @@ nav .logo img {
 }
 
 nav ul {
+  display: flex;
   list-style: none;
 }
 

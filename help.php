@@ -54,10 +54,10 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
             <p>When you open our system, you will see the login page. If you are not a registered user, go to the "Register Page" and enter your details, then click on the "Register" button. If you are already a registered user, enter your username and password to log in to our system. After logging in, you will be directed to the user dashboard.</p>
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="login-page.jpg" alt="Login Page">
+                    <img src="login.jpeg" alt="Login Page">
                 </div>
                 <div class="image-placeholder">
-                    <img src="register-page.jpg" alt="Register Page">
+                    <img src="register.jpeg" alt="Register Page">
                 </div>
             </div>
         </section>
@@ -67,10 +67,10 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
             <p>To add products, navigate to the "Add Product" section from your dashboard. Enter the product details in the provided form and click the "Add Product" button. You can view all added products by returning to the dashboard, where you'll see the product table.</p>
             <div class="image-container">
                 <div class="image-placeholder">
-                    <img src="dashboard.jpg" alt="Dashboard">
+                    <img src="user_dashboard.jpeg" alt="Dashboard">
                 </div>
                 <div class="image-placeholder">
-                    <img src="add-product-page.jpg" alt="Add Product Page">
+                    <img src="add_product_page.jpeg" alt="Add Product Page">
                 </div>
             </div>
         </section>
