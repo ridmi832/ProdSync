@@ -1,6 +1,12 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 session_start();
 include('../db_connect.php');
+if (!isset($_SESSION['admin_id'])) {
+  header("Location: ../login.php");
+  exit();
+}
 
 $user_id = $_GET['user_id'] ?? null;
 

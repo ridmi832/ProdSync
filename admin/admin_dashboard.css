@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url("PicNew4.jpg");
+  background-image: url("../PicNew4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -139,7 +139,7 @@ nav ul li a.active {
 }
 
 .custom-button::before {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 60px;
