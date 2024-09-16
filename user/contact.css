@@ -20,14 +20,14 @@
 
 /* Body styles */
 body {
-  background-image: url("PicNew4.jpg");
+  background-image: url("../PicNew4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100%;
+  min-height: 100vh;
   margin: 0;
-  overflow-y: auto;
-  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
 }
 
 /* Navigation styles */
@@ -59,18 +59,25 @@ nav ul li a {
   color: var(--white);
   text-decoration: none;
   padding: 0.5rem 1rem;
-  transition: background 0.3s;
+  transition: background 0.3s, color 0.3s;
 }
 
-nav ul li a:hover,
+nav ul li a:hover {
+  background: var(--green);
+  color: var(--dark-green);
+  border-radius: 0.3rem;
+}
+
 nav ul li a.active {
   background: var(--green);
+  color: var(--white);
   border-radius: 0.3rem;
 }
 
 /* Hamburger menu styles */
 .checkbtn {
   display: none; /* Hidden by default */
+  cursor: pointer;
 }
 
 #check {
@@ -79,29 +86,83 @@ nav ul li a.active {
 
 /* Container styles */
 .container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
-  max-width: 500px; /* Reduced from 600px or previous value */
-  margin: 0 auto; /* This centers the container horizontally */
 }
 
 /* Contact section styles */
 .contact-section {
-  background-color: var(--white);
-  padding: 1.5rem; /* Slightly reduced padding */
-  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem;
+  border-radius: 1rem;
   box-shadow: var(--box-shadow);
+  max-width: 800px;
+  width: 100%;
 }
 
 .contact-section h1 {
-  font-size: 2rem; /* Slightly smaller heading */
-  color: var(--black);
-  margin-bottom: 1rem; /* Spacing below the main heading */
+  font-size: 2.5rem; /* Increased heading size */
+  color: var(--dark-green);
+  margin-bottom: 1.5rem; /* Spacing below the main heading */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-.contact-section p {
-  margin-bottom: 1.5rem; /* Spacing below the paragraph */
+.contact-section > p {
+  text-align: center;
+  margin-bottom: 2rem; /* Increased spacing below paragraph */
+  font-size: 1.1rem;
   line-height: 1.6; /* Improve readability */
-  font-size: 1.2rem; /* Smaller text */
+  color: var(--black);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info section {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-info ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--dark-green);
 }
 
 /* Form styles */
@@ -145,52 +206,65 @@ nav ul li a.active {
   background: var(--black);
 }
 
-/* Responsive styles */
+/* Add these styles to your existing contact.css file */
 
-@media (max-width: 991px) {
-  html {
-    font-size: 55%;
-  }
-
-  .container {
-    max-width: 50%;
-  }
+.contact-section h1 {
+  font-size: 2.5rem;
+  color: var(--dark-green);
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-@media (max-width: 768px) {
-  .container {
-    max-width: 60%; /* Use percentage for smaller screens */
-    padding: 1rem;
-  }
-  nav ul {
-    display: none; /* Hide navigation items */
-  }
-
-  .checkbtn {
-    display: block; /* Show hamburger icon */
-    cursor: pointer;
-  }
-
-  #check:checked ~ ul {
-    display: flex; /* Show navigation items when hamburger is checked */
-    flex-direction: column; /* Stack vertically */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: var(--dark-green);
-    width: 100%;
-    z-index: 9;
-  }
-
-  nav ul li {
-    margin: 0; /* Remove side margin when stacked */
-  }
-
-  .contact-section h1 {
-    font-size: 2rem; /* Adjust header font size for smaller screens */
-  }
-
-  .btn {
-    font-size: 1.4rem; /* Adjust button font size */
-  }
+.contact-section > p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-info section {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.contact-info h2 {
+  color: var(--dark-green);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.contact-info ul li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.contact-info a {
+  color: var(--green);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-info a:hover {
+  color: var(--dark-green);
+}
+
+/* Remove the media query for .contact-info section */
