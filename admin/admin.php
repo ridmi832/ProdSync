@@ -1,10 +1,10 @@
 <?php 
 session_start();
-include('db_connect.php');
+include('../db_connect.php');
 // Logout functionality
 if(isset($_GET['logout'])){
   session_destroy();
-  header('location:login.php'); // Redirect to login page after logout
+  header('location:../login.php'); // Redirect to login page after logout
 }
 
 // Count users query
@@ -56,8 +56,7 @@ if(isset($_GET['delete'])){
 <body>
 <div class="container">
     <div class="logo-space">
-      <
-      <img src="prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
     </div>
   <div class="container">
    

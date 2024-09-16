@@ -24,7 +24,7 @@ html {
   overflow-y: auto;
 }
 body {
-  background-image: url("PicNew4.jpg");
+  background-image: url("../PicNew4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -510,5 +510,3 @@ user-display .user-display-table tbody {
   font-size: 24px;
   color: #333;
 }
-
-

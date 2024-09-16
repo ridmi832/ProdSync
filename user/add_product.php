@@ -3,11 +3,11 @@
 
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit();
 }
 
-include 'db_connect.php'; // Include your database connection file
+include '../db_connect.php'; // Include your database connection file
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $user_id = $_SESSION['user_id'];
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <header>
             <h1>Add Product</h1>
             <nav>
-                <a href="index.php" class="icon">Back to Dashboard</a>
+                <a href="../user/index.php" class="icon">Back to Dashboard</a>
             </nav>
         </header>
         <main>

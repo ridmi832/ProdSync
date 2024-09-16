@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('db_connect.php');
+include('../db_connect.php');
 
 $user_id = $_GET['user_id'] ?? null;
 
@@ -52,8 +52,7 @@ $row = mysqli_fetch_assoc($select);
   ?>
   <div class="container">
     <div class="logo-space">
-      <
-      <img src="prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
     </div>
     <div class="admin-user-form-container centered">
       <?php if ($row): ?>

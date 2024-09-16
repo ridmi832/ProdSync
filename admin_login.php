@@ -1,4 +1,4 @@
-<?php
+e e<?php
 // login.php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            session_regenerate_id(true); // Protect against session fixation attacks
           $_SESSION['admin_id'] = $admin['admin_id'];  // Store admin ID in session
           $_SESSION['username'] = $username;
-          header("Location: ./admin_dashboard.php");
+          header("Location: admin/admin_dashboard.php");
           exit();
       } else {
           $error_message = "Incorrect password.";

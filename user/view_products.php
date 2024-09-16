@@ -4,11 +4,11 @@
 // Start session and check if user is logged in
 session_start();
 if (!isset($_SESSION['user_id'])) {
-    header("Location: login.php");
+    header("Location: ../login.php");
     exit();
 }
 
-include 'db_connect.php'; // Include your database connection file
+include '../db_connect.php'; // Include your database connection file
 $user_id = $_SESSION['user_id'];
 
 // Fetch products

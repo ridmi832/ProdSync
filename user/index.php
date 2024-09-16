@@ -2,8 +2,8 @@
 // index.php - Dashboard page
 
 session_start();
-if (!isset($_SESSION['admin_id'])) {
-    header("Location: login.php");
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../login.php");
     exit();
 }
 
@@ -16,7 +16,7 @@ if (!isset($_SESSION['admin_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="admin_dashboard.css">
+    <link rel="stylesheet" href="index_new.css">
 </head>
 <body>
 <nav>
@@ -26,10 +26,13 @@ if (!isset($_SESSION['admin_id'])) {
 
       </label>
       <div class="logo">
-      <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> 
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> 
       </div>
       <ul>
-       
+        <li><a class="active" href="home.php">Home</a></li>
+        <li><a href="aboutUs.php">About</a></li>
+        <li><a href="contact.php">Contact</a></li>
+        <li><a href="#">Help</a></li>
         <li><a href="admin.php?logout=true">Logout</a></li>
       </ul>
     </nav>
@@ -42,10 +45,10 @@ if (!isset($_SESSION['admin_id'])) {
         </header>
         <main class="background-section">
             <!-- Main content goes here -->
-            <div class="button-container">
-            <a href="admin.php" class="custom-button">Add a user</a>
-            <a href="view_users.php" class="custom-button">View users</a>
-            <a href="logout.php" class="custom-button">Logout</a>
+            <div class="button container">
+            <a href="add_product.php" class="custom-button">Add Product</a>
+            <a href="view_products.php" class="custom-button">View Products</a>
+            <a href="../logout.php" class="custom-button">Logout</a>
             </div>
         </main>
     </div>

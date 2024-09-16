@@ -7,7 +7,7 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
     // The page will continue to load here
 } else {
     // Neither user_id nor admin_id is set in the session
-    header('Location: login.php'); // Redirect to login page
+    header('Location: ../login.php'); // Redirect to login page
     exit(); // Stop executing the rest of the script
 }
 ?>
@@ -26,7 +26,7 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
   </label>
   <div class="logo">
-    <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo">
+    <img src="../prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo">
   </div>
   <ul>
     <li><a href="home.php">Home</a></li>

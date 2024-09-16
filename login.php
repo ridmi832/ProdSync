@@ -5,7 +5,7 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 session_start();
-include ('db_connect.php'); // Include your database connection file
+include ('db_connect.php');// Include your database connection file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $username = $_POST['username'];
@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
            session_regenerate_id(true); // Protect against session fixation attacks
           $_SESSION['user_id'] = $user['user_id'];  // Store user ID in session
           $_SESSION['username'] = $username;
-          header("Location: index.php");
+          header("Location: user/index.php");
           exit();
       } else {
           $error_message = "Incorrect password.";
@@ -51,7 +51,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <header>
         <div class="logo">
-                <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> <!-- Add your logo image here -->
+                <img src="prodsync-high-resolution-logo-transparent.png" alt="ProdSync Logo"> 
             </div>
             <h1>Login</h1>
         </header>
