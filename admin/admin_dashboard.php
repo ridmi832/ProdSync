@@ -41,7 +41,6 @@ if (!isset($_SESSION['admin_id'])) {
             </div>
         </header>
         <main class="background-section">
-            <!-- Main content goes here -->
             <div class="button-container">
             <a href="admin.php" class="custom-button">Add a user</a>
             <a href="view_users.php" class="custom-button">View users</a>

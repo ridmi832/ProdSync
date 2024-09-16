@@ -2,7 +2,7 @@
 session_start(); // This initializes the session
 
 // Check if either user_id or admin_id is set in the session
-if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
+if (isset($_SESSION['user_id'])) {
     // User is logged in (either as regular user or admin)
     // The page will continue to load here
 } else {
@@ -34,7 +34,7 @@ if (isset($_SESSION['user_id']) || isset($_SESSION['admin_id'])) {
         <li><a class="active" href="about.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="help.php">Help</a></li>
-        <li><a href="admin.php?logout=true">Logout</a></li>
+        <li><a href="../logout.php">Logout</a></li>
       </ul>
 </nav>
 

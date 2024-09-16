@@ -28,7 +28,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
-  background-image: url("/PicNew4.jpg");
+  background-image: url("../PicNew4.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -38,6 +38,11 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
+}
+
+.user-link {
+  color: #27ae60;
+  text-decoration: underline;
 }
 
 .container {
@@ -105,7 +110,7 @@ table th {
 }
 
 table tr:hover {
-  background-color: rgba(39, 174, 96, 0.1); /* Light green hover effect */
+  background-color: --; /* Light green hover effect */
 }
 
 /* Center-align the "Actions" buttons */
@@ -184,4 +189,18 @@ form textarea {
     padding: 8px 16px;
     font-size: 1.3rem;
   }
+}
+
+.logo-space {
+  height: 100px; /* Adjust this value as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.logo {
+  max-height: 80px; /* Adjust this value as needed */
+  width: auto;
 }

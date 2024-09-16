@@ -56,6 +56,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 <body>
     <div class="container">
+    <div class="logo-space">
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
+    </div>
         <h2>Edit Product</h2>
         
         <form method="POST">

@@ -43,6 +43,9 @@ if (isset($_GET['delete_product'])) {
 </head>
 <body>
     <div class="container">
+    <div class="logo-space">
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
+    </div>
         <h2>Products for <?php echo htmlspecialchars($user['username']); ?></h2>
         
         <div class="table-container">

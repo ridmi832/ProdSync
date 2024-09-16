@@ -1,16 +1,12 @@
 <?php 
 session_start();
-include('db_connect.php');
+include('../db_connect.php');
 if (!isset($_SESSION['admin_id'])) {
-  header("Location: login.php");
+  header("Location: ../login.php");
   exit();
 }
 
-// Logout functionality
-if(isset($_GET['logout'])){
-  session_destroy();
-  header('location:login.php'); // Redirect to login page after logout
-}
+
 
 // Delete user functionality
 if(isset($_GET['delete'])){
@@ -31,8 +27,7 @@ if(isset($_GET['delete'])){
 <body>
   <div class="container">
     <div class="logo-space">
-      <
-      <img src="prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
+      <img src="../prodsync-high-resolution-logo-transparent.png" alt="Logo" class="logo"> 
     </div>
     <h2 class="page-title">User List</h2>
     
@@ -56,7 +51,7 @@ if(isset($_GET['delete'])){
         while($row = mysqli_fetch_assoc($select)){
           echo '<tr>';
           echo '<td>' . $row['user_id'] . '</td>';
-          echo '<td><a href="user_products.php?user_id=' . $row['user_id'] . '">' . $row['username'] . '</a></td>';
+          echo '<td><a class="user-link" href="user_products.php?user_id=' . $row['user_id'] . '">' . $row['username'] . '</a></td>';
           echo '<td>' . $row['full_name'] . '</td>';
           echo '<td>' . $row['email'] . '</td>';
           echo '<td>

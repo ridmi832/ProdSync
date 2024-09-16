@@ -33,7 +33,7 @@ if (!isset($_SESSION['user_id'])) {
         <li><a href="aboutUs.php">About</a></li>
         <li><a href="contact.php">Contact</a></li>
         <li><a href="#">Help</a></li>
-        <li><a href="admin.php?logout=true">Logout</a></li>
+        <li><a href="../logout.php">Logout</a></li>
       </ul>
     </nav>
     
