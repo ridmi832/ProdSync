@@ -30,7 +30,7 @@ if (!isset($_SESSION['admin_id'])) {
       </div>
       <ul>
        
-        <li><a href="admin.php?logout=true">Logout</a></li>
+        <li><a href="../logout.php">Logout</a></li>
       </ul>
     </nav>
     

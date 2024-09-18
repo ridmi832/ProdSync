@@ -58,7 +58,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <section class="help-step">
             <h1>Step 2: Adding Products</h1>
-            <p>To add products, navigate to the "Add Product" section from your dashboard. Enter the product details in the provided form and click the "Add Product" button. You can view all added products by returning to the dashboard, where you'll see the product table.</p>
+            <p>To add products, navigate to the "Add Product" section from your dashboard. Enter the product details in the provided form and click the "Add Product" button. You can view all added products by returning to the dashboard and then by going to the view product page, where you'll see the product table.</p>
             <div class="image-container">
                 <div class="image-placeholder">
                     <img src="user_dashboard.jpeg" alt="Dashboard">
@@ -71,7 +71,7 @@ if (!isset($_SESSION['user_id'])) {
 
         <section class="help-step">
             <h1>Step 3: View and Delete Products</h1>
-            <p>After adding products, you can view all your products in the product table on your dashboard. To delete a product, locate it in the product table and click on the "Delete" button under the "Action" column in the corresponding product row. You can also edit product details by clicking the "Edit" button next to each product.</p>
+            <p>After adding products, you can view all your products in the product table in view product page, on your dashboard. To delete a product, click on the "Delete" button under the "Action" column in the corresponding product row.</p>
             <div class="image-container">
                 <div class="image-placeholder">
                     <img src="view_product.jpeg" alt="Product Table">

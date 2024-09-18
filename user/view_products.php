@@ -17,7 +17,7 @@ $product_query->bind_param("i", $user_id);
 $product_query->execute();
 $products_result = $product_query->get_result();
 
-if (isset($_GET['delete'])) {
+/*if (isset($_GET['delete'])) {
     $product_id = $_GET['delete'];
     $delete_stmt = $conn->prepare("DELETE FROM products WHERE product_id = ? AND user_id = ?");
     $delete_stmt->bind_param("ii", $product_id, $user_id);
@@ -25,7 +25,19 @@ if (isset($_GET['delete'])) {
 
     header("Location: view_products.php");
     exit();
+    
+}*/
+
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete'])) {
+    $product_id = $_POST['delete'];
+    $delete_stmt = $conn->prepare("DELETE FROM products WHERE product_id = ? AND user_id = ?");
+    $delete_stmt->bind_param("ii", $product_id, $user_id);
+    $delete_stmt->execute();
+
+    header("Location: view_products.php");
+    exit();
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -68,7 +80,13 @@ if (isset($_GET['delete'])) {
                             <td><?php echo htmlspecialchars($product['manufactured_machine']); ?></td>
                             <td><?php echo htmlspecialchars($product['manufactured_date']); ?></td>
                             <td><?php echo htmlspecialchars($product['product_quality']); ?></td>
-                            <td><a class="delet-btn"   href="view_products.php?delete=<?php echo $product['product_id']; ?>">Delete</a></td>
+                            <!--<td><a class="delet-btn"   href="view_products.php?delete= <?php echo $product['product_id']; ?>">Delete</a></td> -->
+                            <td>
+                            <form action="view_products.php" method="POST" >
+                                <input type="hidden" name="delete" value="<?php echo $product['product_id']; ?>">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+                            </td>
                         </tr>
                     <?php endwhile; ?>
                 </tbody>

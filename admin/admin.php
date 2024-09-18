@@ -8,13 +8,6 @@ if (!isset($_SESSION['admin_id'])) {
 
 
 
-
-// Logout functionality
-if(isset($_GET['logout'])){
-  session_destroy();
-  header('location:../login.php'); // Redirect to login page after logout
-}
-
 // Count users query
 $user_count_query = "SELECT COUNT(*) as user_count FROM users";
 $user_count_result = mysqli_query($conn, $user_count_query);
@@ -47,11 +40,11 @@ if(isset($_POST['add_user'])){
   }
 };
 
-if(isset($_GET['delete'])){
+/*f(isset($_GET['delete'])){
   $user_id=$_GET['delete'];
   mysqli_query($conn,"DELETE FROM users WHERE user_id=$user_id");
-  header('location:admin.php');
-};
+  header('location:admin.php'); 
+};*/
 ?>
 <!DOCTYPE html>
 <html lang="en">
